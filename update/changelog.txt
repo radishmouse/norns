@@ -1,3 +1,48 @@
+# 231114
+
+# norns 2.8.1
+
+- NEW screen overhaul, allowing higher frame rate and various improvements
+#1720 @tlubke @catfact @Dewb
+- NEW wall time measurement #1719 @catfact
+- NEW screen.sleep #1727 @ambv
+- FIX oneway midi devices #1595 @catfact
+- FIX softcut phase inversion #1725 @catfact
+
+
+# 231023
+
+# norns 2.7.9
+
+- NEW cpu_time measurement #1718 @catfact
+- NEW mod system additional hooks #1716 @sixolet
+- NEW lib reflection #1713 @ryleelyman
+- FIX lfo offset behavior #1715 @sonocircuit
+
+
+# 231011
+
+# norns 2.7.8
+
+- NEW lfo lib v2 #1692 @dndrks
+- FIX tape preview debounce #1703 @ryleelyman
+- FIX systemcmd buffer size #1707 @catfact
+- FIX char safety #1705 @tehn
+- FIX file select listing optimization #1705 @tehn
+- FIX file select listing optimization #1712 @beels
+- FIX dev_monitor messages more informative #1710 @ambv
+- FIX util.wrap global var correction #1704 @sixolet
+- FIX restart tuning #1695 @dndrks
+- FIX midi mapping tuning #1696 @dndrks
+- FIX softcut voice sync parameter order #1677 @catfact
+- FIX menu disk display allow large numbers #1690 @radishmouse
+- FIX musicutil 7th chord scale generation #1688 @Dewb
+
+# image
+
+- FIX disble hciuart #1700 @tehn
+
+
 # 230614
 
 # norns 2.7.7

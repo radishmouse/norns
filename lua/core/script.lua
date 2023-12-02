@@ -47,6 +47,9 @@ Script.clear = function()
   -- reset cleanup script
   cleanup = norns.none
 
+  -- reset refresh callback
+  refresh = norns.none
+
   -- reset oled redraw
   redraw = norns.blank
 
@@ -132,6 +135,7 @@ Script.init = function()
   print("# script init")
   params.name = norns.state.shortname
   init()
+  hook.script_post_init()
   _norns.screen_save()
 end
 
@@ -202,7 +206,9 @@ Script.load = function(filename)
       norns.state.save() -- remember this script for next launch
       norns.script.nointerface = redraw == norns.blank -- check if redraw is present
       norns.script.redraw = redraw -- store redraw function for context switching
+      norns.script.refresh = refresh -- store refresh function for context switching
       redraw = norns.none -- block redraw until Script.init
+      refresh = norns.none -- block refresh until Script.init
       Script.run() -- load engine then run script-specified init function
     else
       Script.clear()
